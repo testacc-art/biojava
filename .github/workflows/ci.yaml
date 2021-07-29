@@ -22,4 +22,4 @@ jobs:
           java-version: 11
           cache: maven
       - name: Test with Maven
-        run: mvn verify
+        run: mvn install #verify
