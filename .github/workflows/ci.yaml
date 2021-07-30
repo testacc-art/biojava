@@ -7,7 +7,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-18.04]
+        os: [windows-latest]
         java: [11]
       fail-fast: false
       max-parallel: 4
@@ -20,6 +20,5 @@ jobs:
         with:
           distribution: adopt
           java-version: 11
-          cache: maven
       - name: Test with Maven
-        run: mvn install #verify
+        run: mvn -DskipTests=true -Denforcer.skip=true -Prelease clean install #verify
