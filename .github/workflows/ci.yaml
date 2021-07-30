@@ -22,4 +22,4 @@ jobs:
           java-version: 11
       - name: Test with Maven
         shell: pwsh
-        run: mvn -DskipTests=true -D enforcer.skip=true -Prelease clean install #verify
+        run: mvn -DskipTests=true -Denforcer.skip=true -Prelease clean install #verify
