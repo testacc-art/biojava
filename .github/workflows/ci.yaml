@@ -20,6 +20,5 @@ jobs:
         with:
           distribution: adopt
           java-version: 11
-          cache: maven
       - name: Test with Maven
         run: mvn install #verify
