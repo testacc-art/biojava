@@ -16,10 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Set up JDK
-        uses: KengoTODA/setup-java@introduce-cache
+        uses: dmitry-shibanov/setup-java@v-dmshib/introduce-cache
         with:
           distribution: adopt
           java-version: 11
           cache: maven
       - name: Test with Maven
         run: mvn install #verify
+      - run: python4 --version
