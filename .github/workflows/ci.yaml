@@ -23,4 +23,3 @@ jobs:
           cache: maven
       - name: Test with Maven
         run: mvn install #verify
-      - run: python4 --version
