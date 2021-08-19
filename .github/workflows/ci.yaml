@@ -23,3 +23,5 @@ jobs:
           cache: maven
       - name: Test with Maven
         run: mvn -DskipTests=true `-Denforcer`.skip=true -Prelease clean install #verify
+        
+      - run: exit 1
