@@ -16,9 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Set up JDK
-        uses: KengoTODA/setup-java@introduce-cache
+        uses: actions/setup-java@main
         with:
           distribution: adopt
           java-version: 11
       - name: Test with Maven
-        run: mvn install #verify
+        run: mvn -DskipTests=true `-Denforcer`.skip=true -Prelease clean install #verify
